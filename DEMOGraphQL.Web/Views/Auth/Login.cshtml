@@ -1,0 +1,20 @@
+﻿@using DEMOGraphQL.Web.Models
+
+@model LoginModel
+
+<h2>Вход на сайт</h2>
+
+<form asp-action="Login" asp-controller="Auth" asp-anti-forgery="true" method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label asp-for="Email">Введите Email</label>
+        <input name="Email" type="text" asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Password">Введите пароль</label>
+        <input name="Password" asp-for="Password" />
+    </div>
+    <div>
+        <input type="submit" value="Войти" />
+    </div>
+</form>
